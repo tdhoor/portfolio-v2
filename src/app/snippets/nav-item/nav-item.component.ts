@@ -9,7 +9,7 @@ import { Component, OnInit, Output, EventEmitter, Input, SimpleChanges } from '@
 export class NavItemComponent implements OnInit {
 
   @Input()
-  navItem: string = '';
+  navItem!: string;
   @Output() 
   itemOnClick: EventEmitter<string> = new EventEmitter<string>();
 

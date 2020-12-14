@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import SliderOneItem from '../../../assets/ts/interfaces/sliderOneItem';
+import SliderOneItem from '../../../assets/ts/interfaces/sliderOneItemInterface';
 
 @Component({
   selector: 'app-slider-one',
@@ -10,7 +10,7 @@ import SliderOneItem from '../../../assets/ts/interfaces/sliderOneItem';
 export class SliderOneComponent implements OnInit {
 
   @Input()
-  sliderItems: Array<SliderOneItem> = [];
+  sliderItems!: Array<SliderOneItem>;
   @Input()
   title: string = '';
 

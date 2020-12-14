@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import SliderTwoItem from '../../../assets/ts/interfaces/sliderTwoItem';
+import SliderTwoItem from '../../../assets/ts/interfaces/sliderTwoItemInterface';
 
 @Component({
   selector: 'app-slider-two',
@@ -13,7 +13,7 @@ export class SliderTwoComponent implements OnInit {
   sliderItems: Array<SliderTwoItem> = [];
 
   currentItemIndex: number = 0;
-  currentItem?: SliderTwoItem;
+  currentItem!: SliderTwoItem;
 
   constructor() { }
 

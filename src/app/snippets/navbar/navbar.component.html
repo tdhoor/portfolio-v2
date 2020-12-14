@@ -1,4 +1,4 @@
-<div class="nav-container">
+<div class="nav-container" *ngIf="navItems">
     <div class="nav-items-active">
         <app-nav-item [navItem]="navItems[0]"  (itemOnClick)="navItemOnClick(navItems[0])"></app-nav-item>
         <img src="assets/icons/rectangle_48.svg" alt="icon arrow-up" />

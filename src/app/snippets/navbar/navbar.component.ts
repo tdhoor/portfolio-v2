@@ -10,7 +10,7 @@ const NAV_PLACEHOLDER = "menu";
 export class NavbarComponent implements OnInit {
   
   @Input()
-  navItems: Array<string> = [];
+  navItems!: Array<string>;
 
   private activeNavItemIndex: number = 0;
   private pageSections: any;
@@ -23,7 +23,9 @@ export class NavbarComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
     this.initElements();
     this.initEventListener();
   }
