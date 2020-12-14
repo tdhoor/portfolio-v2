@@ -1,0 +1,47 @@
+@import "../../../assets/scss/principles";
+
+.text-mod-02 {
+  .header {
+    text-align: center;
+    margin-bottom: $distance_xxl;
+    h3 {
+      color: $color_white;
+    }
+  }
+  .box-container {
+    text-align: left;
+    padding: $distance_xl + 8px; // eig. 40px;
+    background: $color_not_white;
+    border: $border_radius_xs solid $color_white;
+    box-sizing: border-box;
+    border-radius: $border_radius_m + 4px;
+    margin-right: $distance_l; // eig. 20px
+    h4 {
+      color: $color_white;
+      margin-bottom: $distance_l;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      li {
+        span {
+          width: 22px;
+          height: 22px;
+          padding-top: 6px;
+          padding-left: 1px;
+          margin-right: 2px;
+          border-radius: $border_radius_xs;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}

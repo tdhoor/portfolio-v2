@@ -1,0 +1,20 @@
+<div class="row text-mod-02" *ngIf="item">
+    <div class="header col-lg-12">
+        <h3>
+            {{ item.title }}
+        </h3>
+    </div>
+
+    <div class="col-lg-4 box-container"  *ngFor="let element of item.boxes; let i = index" [class.col-lg-offset-2]="i == 0" >
+        <h4 class="subline">{{ element.title }}</h4>
+        <ul>
+            <li  *ngFor="let el of element.list">
+                <a [href]="el.url" target="_blank"><span>✅</span> {{ el.text }}</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+

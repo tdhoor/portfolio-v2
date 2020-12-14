@@ -17,24 +17,29 @@
       </div>
     </div>
 
-    <div class="section-02 about">
+    <div class="section-02">
       <div class="sec-inner"> 
         <app-text-mod01 [item]="aboutMe"></app-text-mod01>
         <app-console-mod></app-console-mod>
-
       </div>
     </div>
 
     <div class="section-03">
+     <div class="sec-inner">
       <app-slider-one [title]="'Work Experience'" [sliderItems]="companies"></app-slider-one>
+     </div>
     </div>
 
-    <div class="section-04 projects">
-      <app-slider-two [sliderItems]="projects"></app-slider-two>
+    <div class="section-04">
+      <div class="sec-inner">
+        <app-slider-two [sliderItems]="projects"></app-slider-two>
+      </div>
     </div>
 
-    <div class="section-05 educations">
-    
+    <div class="section-05">
+      <div class="sec-inner">
+        <app-text-mod02 [item]="furtherStuff"></app-text-mod02>
+      </div>
     </div>
 
     <div class="section-06 test">

@@ -9,6 +9,7 @@ import { TextMod01Component } from './snippets/text-mod01/text-mod01.component';
 import { ConsoleModComponent } from './snippets/console-mod/console-mod.component';
 import { SliderOneComponent } from './snippets/slider-one/slider-one.component';
 import { SliderTwoComponent } from './snippets/slider-two/slider-two.component';
+import { TextMod02Component } from './snippets/text-mod02/text-mod02.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SliderTwoComponent } from './snippets/slider-two/slider-two.component';
     TextMod01Component, 
     ConsoleModComponent,
     SliderOneComponent,
-    SliderTwoComponent
+    SliderTwoComponent,
+    TextMod02Component,
   ],
   imports: [
     BrowserModule,
