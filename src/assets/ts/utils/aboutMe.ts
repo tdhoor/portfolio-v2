@@ -1,6 +1,11 @@
-export default {
-    headline: "That's me",
-    text: "jald f adkj fa dkfj asldfj adlk fasldjf as fjlsakd flka jdfas dlfja sdlfj ad fklasjd fklaj eklfja klsjdfa sjdlk jfdklaj flkajd fl asldkf j" + 
-    "lakdj flakj dsflka dsf alkj dflk alsdkf a dfka jdslf asld fsdkj falksdj fasj dfl salkd jfksdj lk falksjf kla dflkasj dkljf lasdflkjas df" +
-    "aslkfjasldkfj aslkj flak sdlkfj aksldj flkj fklj dlkf aldksj fkla jdlskfj akls djflkaj flka dfj"
+const aboutMe = {
+    title: "That's me",
+    text: `Servus 👋🏼 /*hello*/    
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.`
 }
+
+export default aboutMe;

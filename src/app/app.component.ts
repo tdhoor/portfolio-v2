@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
-import Companies from '../assets/ts/utils/companies';
-import Projects from '../assets/ts/utils/projects';
+import COMPANIES from '../assets/ts/utils/companies';
+import PROJECTS from '../assets/ts/utils/projects';
+import ABOUTME from '../assets/ts/utils/aboutMe';
 
-import SliderOneItem from '../assets/ts/interfaces/sliderOneItem';
-import SliderTwoItem from '../assets/ts/interfaces/sliderTwoItem';
+import SliderOneItem from '../assets/ts/interfaces/sliderOneItemInterface';
+import SliderTwoItem from '../assets/ts/interfaces/sliderTwoItemInterface';
+import AboutMeInterface from 'src/assets/ts/interfaces/aboutMeInterface';
 
 @Component({
   selector: 'app-root',
@@ -18,13 +20,15 @@ export class AppComponent {
   
   companies: Array<SliderOneItem>
   projects: Array<SliderTwoItem>
+  aboutMe: AboutMeInterface;
 
 
   constructor(){
     this.title = 'portfolio-v2';
     this.navItems = ['menu', 'about', 'experience', 'projects', 'educations'];
-    this.companies = Companies;
-    this.projects = Projects;
+    this.companies = COMPANIES;
+    this.projects = PROJECTS;
+    this.aboutMe = ABOUTME;
   }
 
   ngOnInit(): void {    
