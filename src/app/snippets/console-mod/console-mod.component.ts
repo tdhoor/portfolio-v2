@@ -37,8 +37,11 @@ export class ConsoleModComponent implements OnInit {
       const { top } = this.cons.getBoundingClientRect();
 
       if(top <= window.innerHeight - window.innerHeight / 6 && !this.animationStatus.hasStarted){
-        this.startAnimation();
-        this.animationStatus.consoleIsInWindow = true;
+        setTimeout(() => {
+          this.cons.classList.add('active');
+          this.startAnimation();
+          this.animationStatus.consoleIsInWindow = true;
+        }, 2000);
       }
     });
   }
@@ -53,7 +56,13 @@ export class ConsoleModComponent implements OnInit {
     const objectToPrint = JSON.stringify(THOMAS_DORFER, undefined, ANIMATION_SPACES);
 
     for (let i = 0; i < objectToPrint.length; i++) {
-      setTimeout(() => this.consoleText += objectToPrint[i], ANIMATION_SPEED * i );
+      setTimeout(() => {
+        this.consoleText += objectToPrint[i];
+
+        if(i === objectToPrint.length - 1){
+          this.cons.classList.remove('active')
+        }
+      }, ANIMATION_SPEED * i );
     }
   }
 }

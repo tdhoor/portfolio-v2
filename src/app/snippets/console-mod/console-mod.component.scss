@@ -1,16 +1,43 @@
 @import "../../../assets/scss/principles";
 
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
 .console-mod {
   padding: $distance_xxl $distance_xxxl;
   background: $color_not_white;
   border: $border_radius_xs solid $color_white;
   border-radius: $border_radius_m;
-  min-height: 732px;
+  min-height: 871px;
   color: $color_white;
+
+  &.active {
+    .content pre::after {
+      background: transparent;
+      visibility: hidden;
+      animation: none;
+    }
+  }
+
   .content {
     width: 100%;
     pre {
       white-space: pre-wrap;
+      color: $color_white;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: normal;
+      font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+      &::after {
+        content: " ";
+        background: $color_white;
+        animation: blink 0.75s steps(5, start) infinite;
+      }
     }
   }
 }
