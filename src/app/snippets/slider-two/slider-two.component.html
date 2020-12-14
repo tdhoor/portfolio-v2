@@ -1,0 +1,39 @@
+<div class="row slider-two" *ngIf="currentItem">
+    <div class="col-lg-offset-3 col-lg-6 slider-two-item">
+
+        <div class="container-header">
+            <div class="container-title">
+                <h4>{{ currentItem.title }}</h4>
+            </div>
+            <div class="container-tech" >
+                <div class="tech-item overline" *ngFor="let tech of currentItem.technics">
+                    {{ tech }}
+                </div>
+            </div>
+        </div>
+
+        <div class="container-text">
+            <p>
+                {{ currentItem.text }}
+            </p>
+        </div>
+
+        <ul *ngFor="let link of currentItem.links">
+            <li>
+                <a [attr.href]="link.url" target="_blank" class="subline">{{ link.text }}</a>
+            </li>
+        </ul>
+
+        <div class="slider-two-pagination">
+            <span  *ngFor="let slider of sliderItems; let i = index" [ngClass]="{active:currentItemIndex === i}" class="dot"></span>
+        </div>
+
+        <a class="slider-two-btn-left" (click)="handleSliderTwoClickLeft()">
+            <img src="/assets/icons/rectangle_48.svg" alt="arrow button">
+        </a>
+        
+        <a class="slider-two-btn-right" (click)="handleSliderTwoClickRight()">
+            <img src="/assets/icons/rectangle_48.svg" alt="arrow button">
+        </a>
+    </div>
+</div>

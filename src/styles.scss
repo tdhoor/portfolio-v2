@@ -1,7 +1,10 @@
 // Grid
-@import "../node_modules/flexboxgrid-sass/flexboxgrid.scss";
+@import "../node_modules/flexboxgrid-sass/flexboxgrid";
 // Fonts
 @import url("https://fonts.googleapis.com/css2?family=Rokkitt&family=Trispace:wght@400;500;600&display=swap");
+// Principles
+@import "./assets/scss/_principles";
+@import "./assets/scss/typography";
 
 html,
 body {
@@ -15,23 +18,57 @@ body {
 }
 
 .app-container {
-  display: flex;
-  justify-content: center;
-
-  .app-inner {
-    max-width: 1440px;
-    width: 100%;
-  }
-
-  // just for testing the nav-bar
-  // todo: remove next three lines
-  div[class*="section"] {
-    height: 100vh;
-  }
+  background: linear-gradient(180deg, #0a0806 0%, #151515 100%);
 }
 
-// font-family: 'Rokkitt', serif;
-// font-family: 'Trispace', sans-serif;
+div[class*="section"] {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: unset;
+  background: $color_white;
+}
+
+div[class*="section"] ~ div[class*="section"] {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background: transparent;
+}
+
+.sec-inner {
+  width: 100%;
+  max-width: 1440px;
+  position: relative;
+}
+
+.row {
+  width: 100%;
+}
+
+.section-01 {
+  .sec-inner {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    height: auto;
+  }
+  .container-two {
+    padding-left: 86px;
+    h4 {
+      padding-left: 8px;
+    }
+  }
+}
 
 /**
 ** Navbar Style

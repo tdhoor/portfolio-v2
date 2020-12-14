@@ -1,0 +1,88 @@
+@import "../../../assets/scss/principles";
+
+.slider-two {
+  .slider-two-item {
+    position: relative;
+    border-radius: $border_radius_m;
+    padding: $distance_l;
+    color: $color_white;
+    .container-header {
+      .container-title {
+        margin-top: $distance_l;
+        margin-bottom: $distance_l;
+      }
+      .container-tech {
+        .tech-item {
+          width: fit-content;
+          height: 24px;
+          padding: $distance_xxs $distance_s;
+          margin-bottom: $distance_l;
+          margin-right: $distance_s;
+          display: inline-flex;
+          flex-direction: row;
+          align-items: center;
+          background: $color_gray;
+          border-radius: $border_radius_l;
+        }
+      }
+    }
+    ul {
+      padding-left: 0;
+      margin: 0;
+      list-style-type: none;
+      li {
+        &:before {
+          content: "\00BB \0020";
+          color: $color_oragne;
+        }
+        a {
+          padding: 0;
+          margin: 0;
+          margin-right: $distance_s;
+        }
+      }
+    }
+  }
+  .slider-two-pagination {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -$distance_xl;
+    width: 100%;
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin-right: $distance_s;
+      background: $color_white;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.2;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  a[class*="slider-two-btn"] {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: $color_black;
+    border: $border_radius_xxs solid $color_white;
+    box-sizing: border-box;
+    border-radius: $border_radius_s;
+    cursor: pointer;
+  }
+  .slider-two-btn-left {
+    left: -157px;
+    top: 50%;
+    transform: rotate(-90deg) translateX(50%);
+  }
+  .slider-two-btn-right {
+    right: -157px;
+    top: 50%;
+    transform: rotate(90deg) translateX(-50%);
+  }
+}

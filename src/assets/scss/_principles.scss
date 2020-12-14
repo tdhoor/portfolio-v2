@@ -1,15 +1,34 @@
 /**
  * Generell style
  */
-
 $color_white: #ffffff;
 $color_black: #000000;
+$color_not_black: #1e1e1e;
 $color_shaddow_black: rgba(0, 0, 0, 0.08);
+$color_oragne: #cd9178;
+$color_gray: #ededed;
+
+$distance_xxs: 2px;
+$distance_xs: 4px;
+$distance_s: 8px;
+$distance_m: 16px;
+$distance_l: 24px;
+$distance_xl: 32px;
+$distance_xxl: 64px;
+$distance_xxxl: 104px;
+
+$border_radius_xxs: 3px;
+$border_radius_xs: 4px;
+$border_radius_s: 6px;
+$border_radius_m: 8px;
+$border_radius_l: 24px;
+
+$font_trispace: "Trispace", sans-serif;
+$font_rokkitt: "Rokkitt", serif;
 
 /**
  * Navbar
  */
-
 $nav-width: 200px;
 $nav-height: 200px;
 

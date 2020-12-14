@@ -8,6 +8,7 @@ const NAV_PLACEHOLDER = "menu";
 })
 
 export class NavbarComponent implements OnInit {
+  
   @Input()
   navItems: Array<string> = [];
 
@@ -69,10 +70,10 @@ export class NavbarComponent implements OnInit {
 
   handleActiveSection(): void {
     this.pageSections.forEach((element: any, index: number) => {
-      const {bottom, height } = element.getBoundingClientRect();
-
-      if(bottom - (height / 2)  <= height && bottom - height / 2  >= 0){
-        this.updateActiveNavItem(index);
+      const { bottom, top } = element.getBoundingClientRect();
+      
+      if(top <= window.innerHeight / 2 && bottom >= window.innerHeight / 2) {
+        this.updateActiveNavItem(index)
       }          
     });
   }
@@ -81,10 +82,10 @@ export class NavbarComponent implements OnInit {
     if(this.activeNavItemIndex === index){
       return
     }
-   
+
     this.activeNavItemIndex = index;
 
-    if(this.activeNavItemIndex === 0 || this.activeNavItemIndex === 5){
+    if(this.activeNavItemIndex === 0 || this.activeNavItemIndex === this.pageSections.length - 1){
       this.navItems[0] = NAV_PLACEHOLDER;
     } else {
       this.navItems[0] = this.navItems[this.activeNavItemIndex];
@@ -99,7 +100,8 @@ export class NavbarComponent implements OnInit {
     const index = this.navItems.findIndex(item => item === navItem);
     this.navItems[index] = navItem;
 
-    const { offsetTop } = this.pageSections[index];
-    window.scrollTo({ top: offsetTop, behavior: 'smooth' })
+    this.pageSections[index].scrollIntoView({
+      behavior: 'smooth'
+  });
   }
 }

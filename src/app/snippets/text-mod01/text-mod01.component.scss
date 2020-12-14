@@ -1,0 +1,11 @@
+@import "../../../assets/scss/principles";
+
+.text-mod-01 {
+  color: $color_white;
+  .header {
+    padding-bottom: $distance_xl;
+  }
+  .content {
+    padding-bottom: $distance_xxl;
+  }
+}

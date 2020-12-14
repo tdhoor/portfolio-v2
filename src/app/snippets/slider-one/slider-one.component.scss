@@ -1,0 +1,93 @@
+@import "../../../assets/scss/principles";
+
+.slider-one {
+  .slider-one-header {
+    text-align: center;
+    color: $color_white;
+    margin-bottom: $distance_xxl;
+  }
+  .slider-one-item {
+    position: relative;
+    background: $color_white;
+    border-radius: $border_radius_m;
+    padding: ($distance_l * 4) $distance_l $distance_l $distance_l;
+    .container-header {
+      width: calc(100% - #{$distance_s});
+      height: 56px;
+      padding: $distance_m;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $color_white;
+      background: $color_black;
+      border-radius: $border_radius_xs;
+      position: absolute;
+      top: $distance_xs;
+      left: $distance_xs;
+    }
+    .container-job-title {
+      width: fit-content;
+      height: 24px;
+      padding: $distance_xxs $distance_s;
+      margin-bottom: $distance_l;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: $color_gray;
+      border-radius: $border_radius_l;
+      color: #1e1e1e;
+    }
+    ul {
+      padding-left: $distance_m;
+      margin: 0;
+      li {
+        p {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .slider-one-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -$distance_xl;
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin-right: $distance_s;
+      background: $color_white;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.2;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  a[class*="slider-one-btn"] {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: $color_black;
+    border: $border_radius_xxs solid $color_white;
+    box-sizing: border-box;
+    border-radius: $border_radius_s;
+    cursor: pointer;
+  }
+  .slider-one-btn-left {
+    left: -157px;
+    top: 50%;
+    transform: rotate(-90deg) translateX(50%);
+  }
+  .slider-one-btn-right {
+    right: -157px;
+    top: 50%;
+    transform: rotate(90deg) translateX(-50%);
+  }
+}

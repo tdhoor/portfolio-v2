@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+.subline,
+.overline {
+  margin: 0;
+  font-family: $font_trispace;
+  font-style: normal;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 132px;
+  line-height: 121px;
+}
+h3 {
+  font-size: 40px;
+  line-height: 45px;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 32px;
+  line-height: 40px;
+}
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p {
+  font-family: $font_rokkitt;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.subline {
+  font-size: 16px;
+  line-height: 24px;
+  color: $color_oragne;
+}
+
+.overline {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color_not_black;
+}

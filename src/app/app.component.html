@@ -1,12 +1,47 @@
 <div class="app-container">
-  <div class="app-inner">
-
     <app-navbar [navItems]="navItems"></app-navbar>
-    <div style="background-color: red;" class="section-01 start"></div>
-    <div style="background-color: black;" class="section-02 about"></div>
-    <div style="background-color: grenn;" class="section-03 experience"></div>
-    <div style="background-color: blue;" class="section-04 projects"></div>
-    <div style="background-color: yellow;"class="section-05 educations"></div>
-    <div style="background-color: lightblue;"class="section-06 test"></div>
-  </div>
+    
+    <div class="section-01">
+      <div class="sec-inner">
+        <div class="row">
+          <div class="col-lg-6 col-lg-offset-1">
+            <div class="container-one">
+              <h1>THOMAS</h1>
+            </div>
+            <div class="container-two">
+              <h1>DORFER</h1>
+              <h4>Engineering is my passion.</h4>
+            </div>
+          </div>
+        </div>
+        <img class="col-lg-4" src="/assets/images/profile_image.png" alt="profil image thomas dorfer  ">
+      </div>
+    </div>
+
+    <div class="section-02 about">
+      <div class="sec-inner"> 
+        <app-text-mod01></app-text-mod01>
+        <app-console-mod></app-console-mod>
+
+      </div>
+    </div>
+
+    <div class="section-03">
+      <app-slider-one [title]="'Work Experience'" [sliderItems]="companies"></app-slider-one>
+    </div>
+
+    <div class="section-04 projects">
+      <app-slider-two [sliderItems]="projects"></app-slider-two>
+    </div>
+
+    <div class="section-05 educations">
+    
+    </div>
+
+    <div class="section-06 test">
+    
+    </div>
+
 </div>
+
+

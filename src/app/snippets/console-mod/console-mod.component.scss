@@ -1,0 +1,16 @@
+@import "../../../assets/scss/principles";
+
+.console-mod {
+  padding: $distance_xxl $distance_xxxl;
+  background: $color_shaddow_black;
+  border: $border_radius_xs solid $color_black;
+  border-radius: $border_radius_m;
+  min-height: 732px;
+  color: $color_white;
+  .content {
+    width: 100%;
+    pre {
+      white-space: pre-wrap;
+    }
+  }
+}
