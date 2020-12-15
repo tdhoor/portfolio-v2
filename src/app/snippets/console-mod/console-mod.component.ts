@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import THOMAS_DORFER from '../../../assets/ts/utils/thomasdorfer';
 
-const ANIMATION_SPEED = 30;
+const ANIMATION_SPEED = 20;
 const ANIMATION_SPACES = 4;
 
 @Component({
