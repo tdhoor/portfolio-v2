@@ -18,7 +18,7 @@ body {
 }
 
 .app-container {
-  background: linear-gradient(180deg, #0a0806 0%, #151515 100%);
+  background: linear-gradient(180deg, #0a0806 0%, #151515 50%, #0a0806 100%);
 }
 
 div[class*="section"] {
@@ -41,10 +41,22 @@ div[class*="section"] ~ div[class*="section"] {
   background: transparent;
 }
 
-.sec-inner {
+// Footer
+div[class*="section"]:last-child {
+  padding: 0 !important;
+  height: 100vh;
+}
+
+.sec-inner,
+.sec-inner-footer {
   width: 100%;
   max-width: 1440px;
   position: relative;
+}
+
+.sec-inner-footer {
+  height: 100%;
+  padding: 0;
 }
 
 .row {
