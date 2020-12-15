@@ -10,39 +10,29 @@ h5,
   font-style: normal;
   font-weight: 600;
 }
-
 h1 {
-  font-size: 132px;
-  line-height: 121px;
+  font-size: 56px;
+  line-height: 58px;
+  text-transform: uppercase;
 }
 h3 {
-  font-size: 40px;
-  line-height: 45px;
+  font-size: 24px;
+  line-height: 32px;
   text-transform: uppercase;
 }
 h4 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 32px;
 }
 h5 {
   font-size: 16px;
   line-height: 24px;
 }
-
-p {
-  font-family: $font_rokkitt;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 32px;
-}
-
 .subline {
   font-size: 16px;
   line-height: 24px;
   color: $color_oragne;
 }
-
 .overline {
   font-weight: 500;
   font-size: 12px;
@@ -50,11 +40,88 @@ p {
   text-transform: uppercase;
   color: $color_not_black;
 }
-
 body {
   font-family: Rokkitt;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+pre {
+  white-space: pre-wrap;
+  color: $color_white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: normal;
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+}
+
+@media only screen and (min-width: $breakpoint_md) {
+  h1 {
+    font-size: 102px;
+    line-height: 94px;
+  }
+  h3 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  h4 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .subline {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .overline {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  body {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  pre {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: $breakpoint_lg) {
+  h1 {
+    font-size: 132px;
+    line-height: 121px;
+  }
+  h3 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  h4 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .subline {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .overline {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  body {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  pre {
+    font-size: 18px;
+  }
 }
