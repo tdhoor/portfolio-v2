@@ -113,11 +113,18 @@ body {
   .section {
     &.stage {
       .container-two {
-        padding-left: 86px;
+        padding-left: 67px;
       }
     }
   }
 }
 
 @media screen and (min-width: $breakpoint_md) {
+  .section {
+    &.stage {
+      .container-two {
+        padding-left: 86px;
+      }
+    }
+  }
 }
