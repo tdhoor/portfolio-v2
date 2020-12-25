@@ -1,9 +1,13 @@
 <div class="app-container">
+    
     <app-navbar [navItems]="navItems"></app-navbar>
-    <div class="section-01">
-      <div class="sec-inner">
+
+    <span class="bg-stage"></span>
+
+    <div class="section stage">
+      <div>
         <div class="row">
-          <div class="col-lg-6 col-lg-offset-1">
+          <div class="container-text col-sm-12 col-md-11 col-md-offset-1 col-lg-12">
             <div class="container-one">
               <h1>THOMAS</h1>
             </div>
@@ -13,41 +17,40 @@
             </div>
           </div>
         </div>
-        <img class="col-lg-4" src="/assets/images/profile_image.png" alt="profil image thomas dorfer  ">
+        <img class="col-sm-8 col-md-6 col-lg-4" src="/assets/images/profile_image.png" alt="profil image thomas dorfer">
       </div>
     </div>
 
-    <div class="section-02">
-      <div class="sec-inner"> 
+    <div class="section">
+      <div> 
         <app-text-mod01 [item]="aboutMe"></app-text-mod01>
         <app-console-mod></app-console-mod>
       </div>
     </div>
 
-    <div class="section-03">
-     <div class="sec-inner">
+    <div class="section">
+     <div>
       <app-slider-one [title]="'Work Experience'" [sliderItems]="companies"></app-slider-one>
      </div>
     </div>
 
-    <div class="section-04">
-      <div class="sec-inner">
+    <div class="section">
+      <div>
         <app-slider-two [sliderItems]="projects"></app-slider-two>
       </div>
     </div>
 
-    <div class="section-05">
-      <div class="sec-inner">
+    <div class="section">
+      <div>
         <app-text-mod02 [item]="furtherStuff"></app-text-mod02>
       </div>
     </div>
 
-    <div class="section-06 test">
-      <div class="sec-inner-footer">
+    <div class="section footer">
+      <div>
         <app-footer [item]="socialMedia"></app-footer>
       </div>
     </div>
-
 </div>
 
 
