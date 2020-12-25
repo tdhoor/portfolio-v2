@@ -1,3 +1,5 @@
+@import "./principles";
+
 h1,
 h2,
 h3,
@@ -59,7 +61,7 @@ pre {
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
 }
 
-@media only screen and (min-width: $breakpoint_md) {
+@media screen and (min-width: $breakpoint_sm) {
   h1 {
     font-size: 102px;
     line-height: 94px;
@@ -92,7 +94,8 @@ pre {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: $breakpoint_lg) {
+
+@media screen and (min-width: $breakpoint_md) {
   h1 {
     font-size: 132px;
     line-height: 121px;
