@@ -1,13 +1,17 @@
-<div class="nav-container" *ngIf="navItems">
-    <div class="nav-items-active">
-        <app-nav-item [navItem]="navItems[0]"  (itemOnClick)="navItemOnClick(navItems[0])"></app-nav-item>
-        <img src="assets/icons/rectangle_48.svg" alt="icon arrow-up" />
-    </div>
-    <div class="nav-items">
-        <ul>
-            <li *ngFor="let item of navItems.slice(1)">
-                <app-nav-item [navItem]="item"  (itemOnClick)="navItemOnClick(item)"></app-nav-item>
-            </li>
-        </ul>
+<div class="row">
+    <div class="nav-outer-container col-sm-12">
+        <div class="nav-container" *ngIf="navItems">
+            <div class="nav-items-active">
+                <app-nav-item [navItem]="navItems[0]"  (itemOnClick)="navItemOnClick(navItems[0])"></app-nav-item>
+                <img src="assets/icons/rectangle_48.svg" alt="icon arrow-up" />
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li *ngFor="let item of navItems.slice(1)">
+                        <app-nav-item [navItem]="item"  (itemOnClick)="navItemOnClick(item)"></app-nav-item>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>

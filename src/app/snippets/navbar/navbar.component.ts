@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit {
   }
   
   initElements(): void {   
-    this.pageSections = document.querySelectorAll("div[class^='section']");
+    this.pageSections = document.querySelectorAll(".section");
     this.navBar = document.querySelectorAll('.nav-container')[0];
     
     this.scroll.maxScroll = Math.max(

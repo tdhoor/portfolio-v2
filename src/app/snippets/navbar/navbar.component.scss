@@ -1,10 +1,15 @@
 @import "../../../assets/scss/principles";
 
+.nav-outer-container {
+  display: flex;
+  justify-content: flex-end;
+}
 .nav-container {
-  position: fixed;
   z-index: 1000;
-  top: $distance_xl;
-  right: $distance_xxl;
+  position: fixed;
+  right: 50%;
+  top: $distance_s;
+  transform: translateX(50%);
   max-width: $nav-width;
   max-height: $nav-height;
   background: $color_white;
@@ -15,13 +20,11 @@
   height: auto;
   transition: all $time-one $func-one;
   transition-property: max-height max-width;
-
   font-family: $font_trispace;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-
   &.hide {
     max-height: $nav-effect-height;
     .nav-items-active,
@@ -78,5 +81,13 @@
         content: "\00BB \0020";
       }
     }
+  }
+}
+
+@media screen and (min-width: $breakpoint_md) {
+  .nav-container {
+    right: $distance_l;
+    top: $distance_xl;
+    transform: none;
   }
 }
