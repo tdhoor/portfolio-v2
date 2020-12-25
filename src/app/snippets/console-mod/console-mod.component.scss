@@ -7,11 +7,11 @@
 }
 
 .console-mod {
-  padding: $distance_xxl $distance_xxxl;
+  padding: $distance_l $distance_xl;
   background: $color_not_white;
   border: $border_radius_xs solid $color_white;
   border-radius: $border_radius_m;
-  min-height: 871px;
+  min-height: 598px;
   color: $color_white;
 
   &.active {
@@ -31,5 +31,19 @@
         animation: blink 0.75s steps(5, start) infinite;
       }
     }
+  }
+}
+
+@media screen and (min-width: $breakpoint_sm) {
+  .console-mod {
+    padding: $distance_xl $distance_xxl;
+    min-height: 807px;
+  }
+}
+
+@media screen and (min-width: $breakpoint_md) {
+  .console-mod {
+    padding: $distance_xxl $distance_xxxl;
+    min-height: 986px;
   }
 }

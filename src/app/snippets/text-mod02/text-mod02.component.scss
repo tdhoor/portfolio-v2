@@ -12,10 +12,17 @@
     text-align: left;
     padding: $distance_xl + 8px; // eig. 40px;
     background: $color_not_white;
-    border: $border_radius_xs solid $color_white;
     box-sizing: border-box;
-    border-radius: $border_radius_m + 4px;
     margin-right: $distance_l; // eig. 20px
+    border: $border_radius_xs solid $color_white;
+    border-radius: 12px 12px 0px 0px;
+    border-bottom: 0;
+
+    ~ .box-container {
+      border-radius: 0px 0px 12px 12px;
+      border: $border_radius_xs solid $color_white;
+    }
+
     h4 {
       color: $color_white;
       margin-bottom: $distance_l;
@@ -41,6 +48,19 @@
           text-decoration: none;
           color: white;
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_md) {
+  .text-mod-02 {
+    .box-container {
+      border: $border_radius_xs solid $color_white;
+      border-radius: $border_radius_m + 4px;
+      ~ .box-container {
+        border: $border_radius_xs solid $color_white;
+        border-radius: $border_radius_m + 4px;
       }
     }
   }

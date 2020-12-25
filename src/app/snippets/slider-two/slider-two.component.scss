@@ -47,7 +47,8 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: -$distance_xl;
+    bottom: -43px;
+    left: 0;
     width: 100%;
     .dot {
       height: 10px;
@@ -76,13 +77,33 @@
     cursor: pointer;
   }
   .slider-two-btn-left {
-    left: -157px;
-    top: 50%;
-    transform: rotate(-90deg) translateX(50%);
+    left: $distance_l;
+    top: auto;
+    bottom: -58px;
+    transform: rotate(-90deg);
   }
   .slider-two-btn-right {
-    right: -157px;
-    top: 50%;
-    transform: rotate(90deg) translateX(-50%);
+    right: $distance_l;
+    top: auto;
+    bottom: -58px;
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (min-width: $breakpoint_md) {
+  .slider-two {
+    .slider-two-pagination {
+      bottom: -$distance_xl;
+    }
+    .slider-two-btn-left {
+      left: -157px;
+      top: 50%;
+      transform: rotate(-90deg) translateX(50%);
+    }
+    .slider-two-btn-right {
+      right: -157px;
+      top: 50%;
+      transform: rotate(90deg) translateX(-50%);
+    }
   }
 }
