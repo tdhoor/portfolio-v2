@@ -98,9 +98,10 @@ export class NavbarComponent implements OnInit {
    * Catch child on click event, update activeNavItem and scroll to the right section.
    * @param navItem : clicked item
    */
-  navItemOnClick(navItem: string): void{
-    const index = this.navItems.findIndex(item => item === navItem);
+  navItemOnClick(navItem: any): void{
+    const index = this.navItems.findIndex((item, index) => item === navItem && index !== 0);
     this.navItems[index] = navItem;
+    
 
     this.pageSections[index].scrollIntoView({
       behavior: 'smooth'
