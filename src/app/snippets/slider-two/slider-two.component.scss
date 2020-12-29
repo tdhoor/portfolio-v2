@@ -1,7 +1,12 @@
 @import "../../../assets/scss/principles";
 
 .slider-two {
+  min-height: 532px;
   .slider-two-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
     position: relative;
     border-radius: $border_radius_m;
     padding: $distance_l;
@@ -12,6 +17,15 @@
         margin-bottom: $distance_l;
       }
       .container-tech {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        overflow-x: scroll;
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+          display: none; /* Safari and Chrome */
+        }
         .tech-item {
           width: fit-content;
           height: 24px;
@@ -90,8 +104,15 @@
   }
 }
 
+@media screen and (min-width: $breakpoint_sm) {
+  .slider-two {
+    min-height: 584px;
+  }
+}
+
 @media screen and (min-width: $breakpoint_md) {
   .slider-two {
+    min-height: 520px;
     .slider-two-pagination {
       bottom: -$distance_xl;
     }

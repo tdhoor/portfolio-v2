@@ -18,8 +18,8 @@
             </p>
         </div>
 
-        <ul *ngFor="let link of currentItem.links">
-            <li>
+        <ul>
+            <li *ngFor="let link of currentItem.links">
                 <a [attr.href]="link.url" target="_blank" class="subline">{{ link.text }}</a>
             </li>
         </ul>

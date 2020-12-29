@@ -7,6 +7,7 @@
     margin-bottom: $distance_xxl;
   }
   .slider-one-item {
+    min-height: 472px;
     position: relative;
     background: $color_white;
     border-radius: $border_radius_m;
@@ -96,8 +97,19 @@
   }
 }
 
+@media screen and (min-width: $breakpoint_sm) {
+  .slider-one {
+    .slider-one-item {
+      min-height: 448px;
+    }
+  }
+}
+
 @media screen and (min-width: $breakpoint_md) {
   .slider-one {
+    .slider-one-item {
+      min-height: 455.5px;
+    }
     .slider-one-pagination {
       bottom: -$distance_xl;
     }
