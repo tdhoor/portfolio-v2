@@ -39,7 +39,5 @@ export class AppComponent {
     this.socialMedia = SOCIAL_MEDIA;
   }
 
-  ngOnInit(): void {    
-    // window.scrollTo(0, 1);
-  }
+  ngOnInit(): void {}
 }
