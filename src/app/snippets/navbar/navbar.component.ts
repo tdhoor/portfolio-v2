@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 const NAV_PLACEHOLDER = "menu";
+const DISPLAY_MD = 768;
 
 @Component({
   selector: 'app-navbar',
@@ -27,13 +28,16 @@ export class NavbarComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.initElements();
+    this.initVariables();
     this.initEventListener();
   }
   
   initElements(): void {   
     this.pageSections = document.querySelectorAll(".section");
     this.navBar = document.querySelectorAll('.nav-container')[0];
-    
+  }
+
+  initVariables(): void {
     this.scroll.maxScroll = Math.max(
       document.body.scrollHeight,
       document.documentElement.scrollHeight,
@@ -42,6 +46,9 @@ export class NavbarComponent implements OnInit {
       document.body.clientHeight,
       document.documentElement.clientHeight
     );
+
+    this.scroll.reachTopOrBottom = window.pageYOffset <= 1 
+    || this.scroll.maxScroll <= window.innerHeight + window.pageYOffset + 10;
   }
 
   initEventListener(): void {
@@ -53,11 +60,15 @@ export class NavbarComponent implements OnInit {
       this.handleActiveSection();
     });
     window.addEventListener('resize', () => {
-      this.initElements();
+      this.initVariables();
     });
   }
 
   handleNavEffect(scroll: number): void {
+    if(window.innerWidth <= DISPLAY_MD  && this.scroll.lastScroll > scroll){
+      this.scroll.lastScroll = scroll <= 0 ? 0 : scroll;      
+      return;
+    }
     if (this.scroll.lastScroll < scroll && !this.scroll.reachTopOrBottom) {
       if(!this.navBar.classList.contains('hide')){
         this.navBar.classList.add('hide');
@@ -102,9 +113,14 @@ export class NavbarComponent implements OnInit {
     const index = this.navItems.findIndex((item, index) => item === navItem && index !== 0);
     this.navItems[index] = navItem;
     
-
     this.pageSections[index].scrollIntoView({
       behavior: 'smooth'
   });
+  }
+
+  toggleHideNavbar(): void {
+    if(window.innerWidth <= DISPLAY_MD){
+      this.navBar.classList.toggle('hide')
+    }
   }
 }

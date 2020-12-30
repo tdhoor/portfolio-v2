@@ -34,23 +34,11 @@
         transform: rotate(180deg);
       }
     }
-    &:hover {
-      max-height: $nav-height;
-      .nav-items-active,
-      .nav-items {
-        min-width: $nav-width;
-        transition-delay: -1s;
-        img {
-          transform: rotate(360deg);
-        }
-      }
-    }
   }
   .nav-items-active {
     min-width: $nav-width;
     padding: $distance_xs $distance_s;
     width: auto;
-    pointer-events: none;
     border-radius: $border_radius_s;
     border: $border_radius_xs solid $color_white;
     background: $color_black;
@@ -89,5 +77,18 @@
     right: $distance_l;
     top: $distance_xl;
     transform: none;
+    &.hide {
+      &:hover {
+        max-height: $nav-height;
+        .nav-items-active,
+        .nav-items {
+          min-width: $nav-width;
+          transition-delay: -1s;
+          img {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
   }
 }
