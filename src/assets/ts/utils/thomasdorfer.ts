@@ -12,7 +12,7 @@ export default {
       "React",
       "Angular",
     ],
-    backend: ["PHP", "Laravel", "SQL", "Python"],
+    backend: ["PHP", "SQL", "Python"],
     mobile: ["Java", "Android", "React Native"],
     others: ["C", "C++"],
   },
